@@ -1,101 +1,834 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE Map[]>
-<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-color="#ffffff">
 
 <Parameters>
   <Parameter name="attribution"><![CDATA[<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>]]></Parameter>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">-88.5937,39.4701,4</Parameter>
+  <Parameter name="center">-116.9749,51.2895,13</Parameter>
+  <Parameter name="description"><![CDATA[This is a vector overlay for Golden Cycling Club.  ]]></Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">22</Parameter>
   <Parameter name="minzoom">0</Parameter>
-  <Parameter name="source"><![CDATA[mapbox:///mapbox.mapbox-streets-v5]]></Parameter>
+  <Parameter name="name"><![CDATA[gcc-overlay]]></Parameter>
+  <Parameter name="source"><![CDATA[mapbox:///tesera.0fda17a9]]></Parameter>
 </Parameters>
 
 
-<Layer name="landuse"
+<Style name="trails-fin-dash" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Double Black')</Filter>
+    <LineSymbolizer stroke="#ffffff" stroke-width="2.5" stroke-dasharray="6, 20" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Black')</Filter>
+    <LineSymbolizer stroke="#000000" stroke-width="2.5" stroke-dasharray="8, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Blue')</Filter>
+    <LineSymbolizer stroke="#15758b" stroke-width="2.5" stroke-dasharray="8, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Green')</Filter>
+    <LineSymbolizer stroke="#348d08" stroke-width="2.5" stroke-dasharray="8, 2" />
+  </Rule>
+</Style>
+<Style name="trails-fin-line" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>750</MaxScaleDenominator>
+    <MinScaleDenominator>500</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Double Black')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#000000" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#000000" halo-fill="#ffffff" halo-radius="1" placement="line" dy="6" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <MinScaleDenominator>750</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Double Black')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#000000" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#000000" halo-fill="#ffffff" halo-radius="1" placement="line" dy="6" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Double Black')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#000000" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#000000" halo-fill="#ffffff" halo-radius="1" placement="line" dy="6" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Double Black')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#000000" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#000000" halo-fill="#ffffff" halo-radius="1" placement="line" dy="6" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Double Black')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#000000" />
+    <TextSymbolizer size="12" face-name="Open Sans Bold" fill="#000000" halo-fill="#ffffff" halo-radius="1" placement="line" dy="6" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Double Black')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#000000" />
+    <TextSymbolizer size="10" face-name="Open Sans Bold" fill="#000000" halo-fill="#ffffff" halo-radius="1" placement="line" dy="6" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Double Black')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#000000" />
+    <TextSymbolizer size="8" face-name="Open Sans Bold" fill="#000000" halo-fill="#ffffff" halo-radius="1" placement="line" dy="6" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500</MaxScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Double Black')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#000000" />
+    <TextSymbolizer face-name="Open Sans Bold" fill="#000000" halo-fill="#ffffff" halo-radius="1" size="8" placement="line" dy="6" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750</MaxScaleDenominator>
+    <MinScaleDenominator>500</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Black')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#000000" halo-radius="1" halo-fill="#ffffff" placement="line" dy="-8" max-char-angle-delta="40" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <MinScaleDenominator>750</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Black')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#000000" halo-radius="1" halo-fill="#ffffff" placement="line" dy="-8" max-char-angle-delta="40" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Black')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#000000" halo-radius="1" halo-fill="#ffffff" placement="line" dy="-8" max-char-angle-delta="40" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Black')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#000000" halo-radius="1" halo-fill="#ffffff" placement="line" dy="-8" max-char-angle-delta="40" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Black')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="12" face-name="Open Sans Bold" fill="#000000" halo-radius="1" halo-fill="#ffffff" placement="line" dy="-8" max-char-angle-delta="40" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Black')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="10" face-name="Open Sans Bold" fill="#000000" halo-radius="1" halo-fill="#ffffff" placement="line" dy="-8" max-char-angle-delta="40" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Black')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="8" face-name="Open Sans Bold" fill="#000000" halo-radius="1" halo-fill="#ffffff" placement="line" dy="-8" max-char-angle-delta="40" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500</MaxScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Black')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer face-name="Open Sans Bold" fill="#000000" halo-radius="1" halo-fill="#ffffff" size="8" placement="line" dy="-8" max-char-angle-delta="40" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750</MaxScaleDenominator>
+    <MinScaleDenominator>500</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Blue')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#15758b" halo-fill="#ffffff" halo-radius="1" placement="line" dy="8" max-char-angle-delta="30" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <MinScaleDenominator>750</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Blue')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#15758b" halo-fill="#ffffff" halo-radius="1" placement="line" dy="8" max-char-angle-delta="30" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Blue')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#15758b" halo-fill="#ffffff" halo-radius="1" placement="line" dy="8" max-char-angle-delta="30" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Blue')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#15758b" halo-fill="#ffffff" halo-radius="1" placement="line" dy="8" max-char-angle-delta="30" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Blue')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="12" face-name="Open Sans Bold" fill="#15758b" halo-fill="#ffffff" halo-radius="1" placement="line" dy="8" max-char-angle-delta="30" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Blue')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="10" face-name="Open Sans Bold" fill="#15758b" halo-fill="#ffffff" halo-radius="1" placement="line" dy="8" max-char-angle-delta="30" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Blue')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="8" face-name="Open Sans Bold" fill="#15758b" halo-fill="#ffffff" halo-radius="1" placement="line" dy="8" max-char-angle-delta="30" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500</MaxScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Blue')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer face-name="Open Sans Bold" fill="#15758b" halo-fill="#ffffff" halo-radius="1" size="8" placement="line" dy="8" max-char-angle-delta="30" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750</MaxScaleDenominator>
+    <MinScaleDenominator>500</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Green')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" halo-radius="1" halo-fill="#ffffff" fill="#348d08" placement="line" dy="8" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <MinScaleDenominator>750</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Green')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" halo-radius="1" halo-fill="#ffffff" fill="#348d08" placement="line" dy="8" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Green')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" halo-radius="1" halo-fill="#ffffff" fill="#348d08" placement="line" dy="8" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Green')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" halo-radius="1" halo-fill="#ffffff" fill="#348d08" placement="line" dy="8" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Green')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="12" face-name="Open Sans Bold" halo-radius="1" halo-fill="#ffffff" fill="#348d08" placement="line" dy="8" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Green')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="10" face-name="Open Sans Bold" halo-radius="1" halo-fill="#ffffff" fill="#348d08" placement="line" dy="8" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Green')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="8" face-name="Open Sans Bold" halo-radius="1" halo-fill="#ffffff" fill="#348d08" placement="line" dy="8" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500</MaxScaleDenominator>
+    <Filter>([built] = 1) and ([rating] = 'Green')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer face-name="Open Sans Bold" halo-radius="1" halo-fill="#ffffff" fill="#348d08" size="8" placement="line" dy="8" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="trails-fin"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
+    <StyleName>trails-fin-line</StyleName>
+    <StyleName>trails-fin-dash</StyleName>  </Layer>
 
-<Layer name="waterway"
+<Style name="dividers-label2" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <TextSymbolizer face-name="Open Sans Bold" fill="#e9627d" halo-fill="#ffffff" halo-radius="1" opacity="1" size="8" placement="line" dy="5" max-char-angle-delta="15" minimum-distance="300" allow-overlap="true" ><![CDATA[[label2]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <TextSymbolizer face-name="Open Sans Bold" fill="#e9627d" halo-fill="#ffffff" halo-radius="1" opacity="1" size="12" placement="line" dy="7" max-char-angle-delta="15" minimum-distance="300" allow-overlap="true" ><![CDATA[[label2]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="dividers-label1" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <TextSymbolizer face-name="Open Sans Bold" fill="#e9627d" halo-fill="#ffffff" halo-radius="1" opacity="1" size="8" placement="line" dy="-5" max-char-angle-delta="15" minimum-distance="300" allow-overlap="true" ><![CDATA[[label1]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <TextSymbolizer face-name="Open Sans Bold" fill="#e9627d" halo-fill="#ffffff" halo-radius="1" opacity="1" size="12" placement="line" dy="-7" max-char-angle-delta="15" minimum-distance="300" allow-overlap="true" ><![CDATA[[label1]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="dividers-dash" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <LineSymbolizer stroke="#e9627d" stroke-width="1" stroke-dasharray="1, 1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <LineSymbolizer stroke="#e9627d" stroke-width="3" stroke-dasharray="1, 1" />
+  </Rule>
+</Style>
+<Style name="dividers-case" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <LineSymbolizer stroke-width="2" stroke-opacity="0.5" stroke="#d1dfdb" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="4" stroke-opacity="1" stroke="#d1dfdb" />
+  </Rule>
+</Style>
+<Layer name="dividers"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
+    <StyleName>dividers-case</StyleName>
+    <StyleName>dividers-dash</StyleName>
+    <StyleName>dividers-label1</StyleName>
+    <StyleName>dividers-label2</StyleName>  </Layer>
 
-<Layer name="water"
+<Style name="annotation-directiontwoway3" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'directiontwoway3')</Filter>
+    <MarkersSymbolizer width="28" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/twoway3.svg" allow-overlap="true" />
+    <TextSymbolizer dx="35" size="11" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="50" wrap-before="true" placement-type="simple" placements="E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'directiontwoway3')</Filter>
+    <MarkersSymbolizer width="28" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/twoway3.svg" allow-overlap="true" />
+    <TextSymbolizer dx="25" size="11" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="50" wrap-before="true" placement-type="simple" placements="E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'directiontwoway3')</Filter>
+    <MarkersSymbolizer width="17" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/twoway3.svg" allow-overlap="true" />
+    <TextSymbolizer size="10" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="50" wrap-before="true" placement-type="simple" dx="15" placements="E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'directiontwoway3')</Filter>
+    <MarkersSymbolizer width="17" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/twoway3.svg" allow-overlap="true" />
+    <TextSymbolizer face-name="Open Sans Bold" size="8" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="50" wrap-before="true" placement-type="simple" dx="15" placements="E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="annotation-directiontwoway2" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'directiontwoway2')</Filter>
+    <MarkersSymbolizer width="25" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/twoway2b.svg" allow-overlap="true" />
+    <TextSymbolizer dx="35" wrap-width="60" size="11" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-before="true" placement-type="simple" placements="E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'directiontwoway2')</Filter>
+    <MarkersSymbolizer width="25" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/twoway2b.svg" allow-overlap="true" />
+    <TextSymbolizer dx="25" wrap-width="50" size="11" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-before="true" placement-type="simple" placements="E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'directiontwoway2')</Filter>
+    <MarkersSymbolizer width="15" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/twoway2b.svg" allow-overlap="true" />
+    <TextSymbolizer size="10" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="40" wrap-before="true" placement-type="simple" dx="15" placements="E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'directiontwoway2')</Filter>
+    <MarkersSymbolizer width="15" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/twoway2b.svg" allow-overlap="true" />
+    <TextSymbolizer face-name="Open Sans Bold" size="8" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="40" wrap-before="true" placement-type="simple" dx="15" placements="E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="annotation-directiontwoway1" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'directiontwoway1')</Filter>
+    <MarkersSymbolizer width="28" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/twoway2.svg" allow-overlap="true" />
+    <TextSymbolizer dx="30" size="11" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="20" wrap-before="true" placement-type="simple" placements="E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'directiontwoway1')</Filter>
+    <MarkersSymbolizer width="28" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/twoway2.svg" allow-overlap="true" />
+    <TextSymbolizer dx="25" size="11" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="20" wrap-before="true" placement-type="simple" placements="E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'directiontwoway1')</Filter>
+    <MarkersSymbolizer width="18" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/twoway2.svg" allow-overlap="true" />
+    <TextSymbolizer size="10" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="20" wrap-before="true" placement-type="simple" dx="15" placements="E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'directiontwoway1')</Filter>
+    <MarkersSymbolizer width="18" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/twoway2.svg" allow-overlap="true" />
+    <TextSymbolizer face-name="Open Sans Bold" size="8" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="20" wrap-before="true" placement-type="simple" dx="15" placements="E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="annotation-directiondownleft" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'directiondownleft')</Filter>
+    <MarkersSymbolizer width="27" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/downleft.svg" allow-overlap="true" />
+    <TextSymbolizer dy="30" size="11" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="40" wrap-before="true" placement-type="simple" placements="N" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'directiondownleft')</Filter>
+    <MarkersSymbolizer width="27" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/downleft.svg" allow-overlap="true" />
+    <TextSymbolizer dy="20" size="11" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="40" wrap-before="true" placement-type="simple" placements="N" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'directiondownleft')</Filter>
+    <MarkersSymbolizer width="16" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/downleft.svg" allow-overlap="true" />
+    <TextSymbolizer size="10" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="40" wrap-before="true" placement-type="simple" dy="15" placements="N" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'directiondownleft')</Filter>
+    <MarkersSymbolizer width="16" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/downleft.svg" allow-overlap="true" />
+    <TextSymbolizer face-name="Open Sans Bold" size="8" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="40" wrap-before="true" placement-type="simple" dy="15" placements="N" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="annotation-directionupleft" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'directionupleft')</Filter>
+    <MarkersSymbolizer width="30" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/upleft.svg" allow-overlap="true" />
+    <TextSymbolizer dy="30" size="11" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="40" wrap-before="true" placement-type="simple" placements="S" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'directionupleft')</Filter>
+    <MarkersSymbolizer width="30" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/upleft.svg" allow-overlap="true" />
+    <TextSymbolizer dy="20" size="11" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="40" wrap-before="true" placement-type="simple" placements="S" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'directionupleft')</Filter>
+    <MarkersSymbolizer width="18" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/upleft.svg" allow-overlap="true" />
+    <TextSymbolizer size="10" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="40" wrap-before="true" placement-type="simple" dy="12" placements="S" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'directionupleft')</Filter>
+    <MarkersSymbolizer width="18" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/upleft.svg" allow-overlap="true" />
+    <TextSymbolizer face-name="Open Sans Bold" size="8" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="40" wrap-before="true" placement-type="simple" dy="12" placements="S" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="annotation-directionup" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'directionup')</Filter>
+    <MarkersSymbolizer width="25" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/up.svg" allow-overlap="true" />
+    <TextSymbolizer dx="30" size="11" face-name="Open Sans Bold" fill="#e9627d" halo-radius="1" wrap-width="50" wrap-before="true" placement-type="simple" placements="E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'directionup')</Filter>
+    <MarkersSymbolizer width="25" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/up.svg" allow-overlap="true" />
+    <TextSymbolizer dx="20" size="11" face-name="Open Sans Bold" fill="#e9627d" halo-radius="1" wrap-width="50" wrap-before="true" placement-type="simple" placements="E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'directionup')</Filter>
+    <MarkersSymbolizer width="15" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/up.svg" allow-overlap="true" />
+    <TextSymbolizer size="10" face-name="Open Sans Bold" fill="#e9627d" halo-radius="1" wrap-width="50" wrap-before="true" placement-type="simple" dx="12" placements="E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'directionup')</Filter>
+    <MarkersSymbolizer width="15" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/up.svg" allow-overlap="true" />
+    <TextSymbolizer face-name="Open Sans Bold" size="8" fill="#e9627d" halo-radius="1" wrap-width="50" wrap-before="true" placement-type="simple" dx="12" placements="E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="annotation-directionright" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([type] = 'directionright')</Filter>
+    <MarkersSymbolizer width="30" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/right.svg" allow-overlap="true" />
+    <TextSymbolizer dy="22" size="11" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="50" wrap-before="true" placement-type="simple" placements="N" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'directionright')</Filter>
+    <MarkersSymbolizer width="30" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/right.svg" allow-overlap="true" />
+    <TextSymbolizer dy="18" size="11" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="50" wrap-before="true" placement-type="simple" placements="N" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([type] = 'directionright')</Filter>
+    <MarkersSymbolizer width="30" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/right.svg" allow-overlap="true" />
+    <TextSymbolizer size="11" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="50" wrap-before="true" placement-type="simple" dy="12" placements="N" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'directionright')</Filter>
+    <MarkersSymbolizer width="25" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/right.svg" allow-overlap="true" />
+    <TextSymbolizer size="10" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="50" wrap-before="true" placement-type="simple" dy="12" placements="N" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'directionright')</Filter>
+    <MarkersSymbolizer width="25" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/right.svg" allow-overlap="true" />
+    <TextSymbolizer face-name="Open Sans Bold" size="8" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="50" wrap-before="true" placement-type="simple" dy="12" placements="N" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="annotation-directionleft" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'directionleft')</Filter>
+    <MarkersSymbolizer width="30" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/left.svg" allow-overlap="true" />
+    <TextSymbolizer size="11" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="50" wrap-before="true" placement-type="simple" dy="12" placements="N" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'directionleft')</Filter>
+    <MarkersSymbolizer width="30" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/left.svg" allow-overlap="true" />
+    <TextSymbolizer size="11" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="50" wrap-before="true" placement-type="simple" dy="12" placements="N" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'directionleft')</Filter>
+    <MarkersSymbolizer width="20" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/left.svg" allow-overlap="true" />
+    <TextSymbolizer size="10" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="50" wrap-before="true" placement-type="simple" dy="12" placements="N" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'directionleft')</Filter>
+    <MarkersSymbolizer width="20" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/left.svg" allow-overlap="true" />
+    <TextSymbolizer face-name="Open Sans Bold" size="8" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="50" wrap-before="true" placement-type="simple" dy="12" placements="N" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="annotation-directiondownright" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([type] = 'directiondownright')</Filter>
+    <MarkersSymbolizer width="30" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/downright.svg" allow-overlap="true" />
+    <TextSymbolizer dx="-35" wrap-width="70" size="11" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-before="true" placement-type="simple" placements="W,SW,S" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'directiondownright')</Filter>
+    <MarkersSymbolizer width="30" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/downright.svg" allow-overlap="true" />
+    <TextSymbolizer dx="-30" wrap-width="70" size="11" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-before="true" placement-type="simple" placements="W,SW,S" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'directiondownright')</Filter>
+    <MarkersSymbolizer width="18" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/downright.svg" allow-overlap="true" />
+    <TextSymbolizer wrap-width="60" size="10" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-before="true" placement-type="simple" dx="-15" placements="W,SW,S" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <Filter>([type] = 'directiondownright')</Filter>
+    <MarkersSymbolizer width="30" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/downright.svg" allow-overlap="true" />
+    <TextSymbolizer size="11" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="50" wrap-before="true" placement-type="simple" dx="-15" placements="W,SW,S" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'directiondownright')</Filter>
+    <MarkersSymbolizer width="18" opacity="1" fill="#e9627d" transform="translate(0,0)" file="../assets/direction/downright.svg" allow-overlap="true" />
+    <TextSymbolizer face-name="Open Sans Bold" size="8" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="50" wrap-before="true" placement-type="simple" dx="-15" placements="W,SW,S" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="annotation-trailcond" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'trailcond')</Filter>
+    <MarkersSymbolizer width="20" opacity="1" transform="translate(0,0)" file="../assets/tourist/information2.svg" allow-overlap="false" fill="#e9627d" stroke="#e9627d" />
+    <TextSymbolizer size="11" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="40" wrap-before="true" placement-type="simple" dy="-14" placements="S,N,NE,E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'trailcond')</Filter>
+    <MarkersSymbolizer width="20" opacity="1" transform="translate(0,0)" file="../assets/tourist/information2.svg" allow-overlap="false" fill="#e9627d" stroke="#e9627d" />
+    <TextSymbolizer size="10" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="40" wrap-before="true" placement-type="simple" dy="-14" placements="S,N,NE,E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'trailcond')</Filter>
+    <MarkersSymbolizer width="20" opacity="1" transform="translate(0,0)" file="../assets/tourist/information2.svg" allow-overlap="false" fill="#e9627d" stroke="#e9627d" />
+    <TextSymbolizer size="9" face-name="Open Sans Bold" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="40" wrap-before="true" placement-type="simple" dy="-14" placements="S,N,NE,E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'trailcond')</Filter>
+    <MarkersSymbolizer width="20" opacity="1" transform="translate(0,0)" file="../assets/tourist/information2.svg" allow-overlap="false" fill="#e9627d" stroke="#e9627d" />
+    <TextSymbolizer face-name="Open Sans Bold" size="8" fill="#e9627d" opacity="1" halo-radius="1" wrap-width="40" wrap-before="true" placement-type="simple" dy="-14" placements="S,N,NE,E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="annotation-radio" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <Filter>([type] = 'radio')</Filter>
+    <MarkersSymbolizer width="20" opacity="0.6" fill="#000000" file="../assets/poi/tower_communications7.svg" allow-overlap="true" />
+  </Rule>
+</Style>
+<Style name="annotation-trailhead" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'trailhead') and ([label] = 'CBT Trailhead: Parking and Trail Information')</Filter>
+    <MarkersSymbolizer width="30" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer placements="E" dx="25" size="13" face-name="Open Sans Bold" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="90" wrap-before="true" placement-type="simple" dy="20" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'trailhead') and ([label] = 'CBT Trailhead: Parking and Trail Information')</Filter>
+    <MarkersSymbolizer width="30" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer placements="E" dx="25" size="12" face-name="Open Sans Bold" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="90" wrap-before="true" placement-type="simple" dy="20" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'trailhead') and ([label] = 'CBT Trailhead: Parking and Trail Information')</Filter>
+    <MarkersSymbolizer width="30" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer placements="E" dx="25" size="10" face-name="Open Sans Bold" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="90" wrap-before="true" placement-type="simple" dy="20" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'trailhead') and ([label] = 'CBT Trailhead: Parking and Trail Information')</Filter>
+    <MarkersSymbolizer width="30" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer placements="E" dx="25" face-name="Open Sans Bold" size="9" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="90" wrap-before="true" placement-type="simple" dy="20" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'trailhead') and ([label] = 'Cedar Lake Trailhead: Parking and Trail Information')</Filter>
+    <MarkersSymbolizer width="30" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer placements="W, S" dx="-25" size="13" face-name="Open Sans Bold" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="90" wrap-before="true" placement-type="simple" dy="20" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'trailhead') and ([label] = 'Cedar Lake Trailhead: Parking and Trail Information')</Filter>
+    <MarkersSymbolizer width="30" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer placements="W, S" dx="-25" size="12" face-name="Open Sans Bold" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="90" wrap-before="true" placement-type="simple" dy="20" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'trailhead') and ([label] = 'Cedar Lake Trailhead: Parking and Trail Information')</Filter>
+    <MarkersSymbolizer width="30" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer placements="W, S" dx="-25" size="10" face-name="Open Sans Bold" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="90" wrap-before="true" placement-type="simple" dy="20" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'trailhead') and ([label] = 'Cedar Lake Trailhead: Parking and Trail Information')</Filter>
+    <MarkersSymbolizer width="30" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer placements="W, S" dx="-25" face-name="Open Sans Bold" size="9" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="90" wrap-before="true" placement-type="simple" dy="20" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'trailhead') and ([label] = 'Reflection Lake Trailhead: Parking and Trail Information')</Filter>
+    <MarkersSymbolizer width="30" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer placements="W, S" dx="-25" size="13" face-name="Open Sans Bold" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="90" wrap-before="true" placement-type="simple" dy="20" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'trailhead') and ([label] = 'Reflection Lake Trailhead: Parking and Trail Information')</Filter>
+    <MarkersSymbolizer width="30" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer placements="W, S" dx="-25" size="12" face-name="Open Sans Bold" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="90" wrap-before="true" placement-type="simple" dy="20" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'trailhead') and ([label] = 'Reflection Lake Trailhead: Parking and Trail Information')</Filter>
+    <MarkersSymbolizer width="30" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer placements="W, S" dx="-25" size="10" face-name="Open Sans Bold" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="90" wrap-before="true" placement-type="simple" dy="20" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'trailhead') and ([label] = 'Reflection Lake Trailhead: Parking and Trail Information')</Filter>
+    <MarkersSymbolizer width="30" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer placements="W, S" dx="-25" face-name="Open Sans Bold" size="9" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="90" wrap-before="true" placement-type="simple" dy="20" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'trailhead') and ([label] = 'Gudjonson Trailhead: Parking and Trail Information')</Filter>
+    <MarkersSymbolizer width="30" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer placements="E" dx="25" size="13" face-name="Open Sans Bold" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="90" wrap-before="true" placement-type="simple" dy="20" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'trailhead') and ([label] = 'Gudjonson Trailhead: Parking and Trail Information')</Filter>
+    <MarkersSymbolizer width="30" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer placements="E" dx="25" size="12" face-name="Open Sans Bold" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="90" wrap-before="true" placement-type="simple" dy="20" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'trailhead') and ([label] = 'Gudjonson Trailhead: Parking and Trail Information')</Filter>
+    <MarkersSymbolizer width="30" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer placements="E" dx="25" size="10" face-name="Open Sans Bold" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="90" wrap-before="true" placement-type="simple" dy="20" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'trailhead') and ([label] = 'Gudjonson Trailhead: Parking and Trail Information')</Filter>
+    <MarkersSymbolizer width="30" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer placements="E" dx="25" face-name="Open Sans Bold" size="9" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="90" wrap-before="true" placement-type="simple" dy="20" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'trailhead')</Filter>
+    <MarkersSymbolizer width="30" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer size="13" face-name="Open Sans Bold" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="90" wrap-before="true" placement-type="simple" dy="20" dx="-20" placements="S,N,W,E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'trailhead')</Filter>
+    <MarkersSymbolizer width="30" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer size="12" face-name="Open Sans Bold" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="90" wrap-before="true" placement-type="simple" dy="20" dx="-20" placements="S,N,W,E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'trailhead')</Filter>
+    <MarkersSymbolizer width="30" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer size="10" face-name="Open Sans Bold" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="90" wrap-before="true" placement-type="simple" dy="20" dx="-20" placements="S,N,W,E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'trailhead')</Filter>
+    <MarkersSymbolizer width="30" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer face-name="Open Sans Bold" size="9" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="90" wrap-before="true" placement-type="simple" dy="20" dx="-20" placements="S,N,W,E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Style name="annotation-smalltrailhead" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([type] = 'smalltrailhead')</Filter>
+    <MarkersSymbolizer width="20" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer size="11" face-name="Open Sans Bold" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="40" wrap-before="true" placement-type="simple" dy="15" placements="S,N,NE,E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([type] = 'smalltrailhead')</Filter>
+    <MarkersSymbolizer width="20" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer size="10" face-name="Open Sans Bold" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="40" wrap-before="true" placement-type="simple" dy="15" placements="S,N,NE,E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([type] = 'smalltrailhead')</Filter>
+    <MarkersSymbolizer width="20" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer size="9" face-name="Open Sans Bold" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="40" wrap-before="true" placement-type="simple" dy="15" placements="S,N,NE,E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([type] = 'smalltrailhead')</Filter>
+    <MarkersSymbolizer width="20" opacity="0.8" file="../assets/transport/parking_bicycle7.svg" allow-overlap="true" />
+    <TextSymbolizer face-name="Open Sans Bold" size="8" fill="#2b2b2b" halo-radius="1" halo-fill="#ffffff" wrap-width="40" wrap-before="true" placement-type="simple" dy="15" placements="S,N,NE,E" ><![CDATA[[label]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="annotation"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
+    <StyleName>annotation-smalltrailhead</StyleName>
+    <StyleName>annotation-trailhead</StyleName>
+    <StyleName>annotation-radio</StyleName>
+    <StyleName>annotation-trailcond</StyleName>
+    <StyleName>annotation-directiondownright</StyleName>
+    <StyleName>annotation-directionleft</StyleName>
+    <StyleName>annotation-directionright</StyleName>
+    <StyleName>annotation-directionup</StyleName>
+    <StyleName>annotation-directionupleft</StyleName>
+    <StyleName>annotation-directiondownleft</StyleName>
+    <StyleName>annotation-directiontwoway1</StyleName>
+    <StyleName>annotation-directiontwoway2</StyleName>
+    <StyleName>annotation-directiontwoway3</StyleName>  </Layer>
 
-<Layer name="aeroway"
+<Style name="map-area" filter-mode="first">
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <PolygonSymbolizer fill-opacity="0.2" comp-op="overlay" fill="#15758b" />
+    <LineSymbolizer stroke="#888888" stroke-width="0.4" stroke-opacity="0.3" />
+  </Rule>
+</Style>
+<Layer name="map-area"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
+    <StyleName>map-area</StyleName>  </Layer>
 
-<Layer name="barrier_line"
+<Style name="map-area-centre" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <MarkersSymbolizer width="35" placement="point" opacity="0.4" file="../assets/hotel-icon-near-mountain-biking3.svg" allow-overlap="true" />
+    <TextSymbolizer face-name="Open Sans Bold" size="16" fill="#888888" wrap-width="60" wrap-before="true" placement-type="simple" dy="20" dx="0" ><![CDATA[[maparea]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="map-area-centre"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
-
-<Layer name="building"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
-
-<Layer name="landuse_overlay"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
-
-<Layer name="tunnel"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
-
-<Layer name="road"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
-
-<Layer name="bridge"
-  group-by="layer"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
-
-<Layer name="admin"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
-
-<Layer name="country_label_line"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
-
-<Layer name="country_label"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
-
-<Layer name="marine_label"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
-
-<Layer name="state_label"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
-
-<Layer name="place_label"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
-
-<Layer name="water_label"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
-
-<Layer name="poi_label"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
-
-<Layer name="road_label"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
-
-<Layer name="waterway_label"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
-
-<Layer name="housenum_label"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
+    <StyleName>map-area-centre</StyleName>  </Layer>
 
 </Map>

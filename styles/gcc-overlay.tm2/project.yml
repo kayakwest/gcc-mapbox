@@ -1,5 +1,5 @@
 _prefs: 
-  saveCenter: true
+  saveCenter: false
 _properties: 
   bridge: 
     "group-by": layer
@@ -10,17 +10,20 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - -88.5937
-  - 39.4701
-  - 4
-description: ''
+  - -116.9749
+  - 51.2895
+  - 13
+description: 'This is a vector overlay for Golden Cycling Club.  '
 format: "png8:m=h"
 interactivity_layer: ''
 layers: null
 maxzoom: 22
 minzoom: 0
-name: ''
-source: "mapbox:///mapbox.mapbox-streets-v5"
+name: gcc-overlay
+source: "mapbox:///tesera.0fda17a9"
 styles: 
-  - style.mss
+  - trails.mss
+  - annotation.mss
+  - extra.mss
+  - basic.mss
 template: ''

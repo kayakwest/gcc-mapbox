@@ -1,6 +1,6 @@
  @font: 'Open Sans Bold';
 
-#trails-fin [built = 1][zoom > 13]{
+#trails [built = 1][zoom > 13]{
   [rating='Green'] {
       ::line {
         line-width: 5;
@@ -27,7 +27,7 @@
         line-color: #348d08;
         line-width: 2.5;
         line-dasharray: 8, 2;      
-    }
+   }
   }
   [rating='Blue'] {
       ::line {

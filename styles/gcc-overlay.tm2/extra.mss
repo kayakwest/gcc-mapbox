@@ -10,23 +10,6 @@
 //    background-color: #fff;
 //}
 
-#points {
-  marker-width:6;
-  marker-fill:#f45;
-  marker-line-color:#c00e0e;
-  marker-allow-overlap:true;
-}
-
-
-#waterway-slnet{
-        [zoom=13] {line-width: 0.2;}
-        [zoom=14] {line-width: 0.4;}
-        [zoom=15] {line-width: 1;}
-        [zoom=16] {line-width: 1.4;}
-        [zoom=17] {line-width: 2;}
-        [zoom>=18] {line-width: 2.4;}  
-  line-color:@rivers;
-}
 
 //#waterway[type!="river"]{
 //        [zoom=13] {line-width: 0.2;}

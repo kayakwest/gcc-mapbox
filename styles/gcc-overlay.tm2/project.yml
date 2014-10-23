@@ -20,10 +20,9 @@ layers: null
 maxzoom: 22
 minzoom: 0
 name: gcc-overlay
-source: "mapbox:///tesera.0fda17a9"
+source: "tmsource://c:/Users/spencer/Documents/GitHub/gcc-mapbox/sources/gcc-source.tm2source"
 styles: 
   - trails.mss
   - annotation.mss
   - extra.mss
-  - basic.mss
 template: ''

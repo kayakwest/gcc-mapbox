@@ -2,16 +2,16 @@ _prefs:
   disabled: []
   inspector: false
   mapid: tesera.0fda17a9
-  rev: s-695dd987
+  rev: s-6fdf77d8
   saveCenter: true
 attribution: ''
 center: 
-  - -116.888
-  - 51.2758
-  - 12
+  - -116.9579
+  - 51.2783
+  - 14
 description: A vector tile source for gcc-styles
 Layer: 
-  - id: trails-fin
+  - id: trails
     Datasource: 
       file: "..\\features\\trails-fin.shp"
       type: shape
@@ -27,6 +27,18 @@ Layer:
       objectid: String
       pk: String
       rating: String
+    properties: 
+      "buffer-size": 8
+    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+  - id: transmission
+    Datasource: 
+      file: "..\\features\\transmission.shp"
+      type: shape
+    description: ''
+    fields: 
+      id: String
+      name: String
+      pk: String
     properties: 
       "buffer-size": 8
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
@@ -55,7 +67,7 @@ Layer:
       pk: String
       type: String
     properties: 
-      "buffer-size": 8
+      "buffer-size": 64
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
   - id: map-area
     Datasource: 
@@ -79,7 +91,7 @@ Layer:
       maparea: String
       pk: String
     properties: 
-      "buffer-size": 8
+      "buffer-size": 64
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
 maxzoom: 18
 minzoom: 0

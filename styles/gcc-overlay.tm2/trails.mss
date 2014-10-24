@@ -1,6 +1,6 @@
  @font: 'Open Sans Bold';
 
-#trails [built = 1][zoom > 13]{
+#trails-fin [built = 1][zoom > 13]{
   [rating='Green'] {
       ::line {
         line-width: 5;

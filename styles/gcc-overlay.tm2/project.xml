@@ -11,11 +11,11 @@
   <Parameter name="maxzoom">22</Parameter>
   <Parameter name="minzoom">0</Parameter>
   <Parameter name="name"><![CDATA[gcc-overlay]]></Parameter>
-  <Parameter name="source"><![CDATA[tmsource://c:/Users/spencer/Documents/GitHub/gcc-mapbox/sources/gcc-source.tm2source]]></Parameter>
+  <Parameter name="source"><![CDATA[mapbox:///tesera.0fda17a9]]></Parameter>
 </Parameters>
 
 
-<Style name="trails-dash" filter-mode="first">
+<Style name="trails-fin-dash" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <Filter>([built] = 1) and ([rating] = 'Double Black')</Filter>
@@ -37,7 +37,7 @@
     <LineSymbolizer stroke="#348d08" stroke-width="2.5" stroke-dasharray="8, 2" />
   </Rule>
 </Style>
-<Style name="trails-line" filter-mode="first">
+<Style name="trails-fin-line" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>750</MaxScaleDenominator>
     <MinScaleDenominator>500</MinScaleDenominator>
@@ -259,27 +259,10 @@
     <TextSymbolizer face-name="Open Sans Bold" halo-radius="1" halo-fill="#ffffff" fill="#348d08" size="8" placement="line" dy="8" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>
-<Layer name="trails"
+<Layer name="trails-fin"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    <StyleName>trails-line</StyleName>
-    <StyleName>trails-dash</StyleName>  </Layer>
-
-<Style name="transmission-hatch" filter-mode="first">
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <LineSymbolizer stroke-width="8" stroke-dasharray="1, 60" stroke="#888888" />
-  </Rule>
-</Style>
-<Style name="transmission-line" filter-mode="first">
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <LineSymbolizer stroke-width="1" stroke="#888888" stroke-dasharray="1, 1" />
-  </Rule>
-</Style>
-<Layer name="transmission"
-  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-    <StyleName>transmission-line</StyleName>
-    <StyleName>transmission-hatch</StyleName>  </Layer>
+    <StyleName>trails-fin-line</StyleName>
+    <StyleName>trails-fin-dash</StyleName>  </Layer>
 
 <Style name="dividers-label2" filter-mode="first">
   <Rule>

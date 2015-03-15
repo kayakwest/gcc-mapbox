@@ -19,7 +19,7 @@
 @park: #dcf8e3;
 @piste: mix(blue,@land,5);
 @school: #fbf6ff;
-@hospital: #fff0f0;
+@hospital: #e9627d*1.5;
 @builtup: #f6faff;
 
 // Background //

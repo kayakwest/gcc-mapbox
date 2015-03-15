@@ -220,8 +220,8 @@
   </Rule>
   <Rule>
     <Filter>([class] = 'hospital')</Filter>
-    <PolygonSymbolizer fill="#fff0f0" />
-    <LineSymbolizer stroke="#f2e4e4" offset="-0.5" />
+    <PolygonSymbolizer fill="#ff93bc" />
+    <LineSymbolizer stroke="#ff8cb2" offset="-0.5" />
   </Rule>
   <Rule>
     <Filter>([class] = 'cemetery')</Filter>
@@ -3033,22 +3033,22 @@
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <TextSymbolizer face-name="Open Sans Bold" fill="#e9627d" halo-fill="#ffffff" halo-radius="1" opacity="1" size="8" placement="line" dy="5" max-char-angle-delta="15" minimum-distance="300" allow-overlap="true" ><![CDATA[[label2]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Open Sans Bold" fill="#e9627d" halo-fill="#ffffff" halo-radius="1" opacity="1" size="8" placement="line" dy="5" max-char-angle-delta="15" minimum-distance="300" allow-overlap="true" avoid-edges="true" ><![CDATA[[label2]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <TextSymbolizer face-name="Open Sans Bold" fill="#e9627d" halo-fill="#ffffff" halo-radius="1" opacity="1" size="12" placement="line" dy="7" max-char-angle-delta="15" minimum-distance="300" allow-overlap="true" ><![CDATA[[label2]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Open Sans Bold" fill="#e9627d" halo-fill="#ffffff" halo-radius="1" opacity="1" size="12" placement="line" dy="7" max-char-angle-delta="15" minimum-distance="300" allow-overlap="true" avoid-edges="true" ><![CDATA[[label2]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Style name="dividers-label1" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <TextSymbolizer face-name="Open Sans Bold" fill="#e9627d" halo-fill="#ffffff" halo-radius="1" opacity="1" size="8" placement="line" dy="-5" max-char-angle-delta="15" minimum-distance="300" allow-overlap="true" ><![CDATA[[label1]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Open Sans Bold" fill="#e9627d" halo-fill="#ffffff" halo-radius="1" opacity="1" size="8" placement="line" dy="-5" max-char-angle-delta="15" minimum-distance="300" allow-overlap="true" avoid-edges="true" ><![CDATA[[label1]]]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <TextSymbolizer face-name="Open Sans Bold" fill="#e9627d" halo-fill="#ffffff" halo-radius="1" opacity="1" size="12" placement="line" dy="-7" max-char-angle-delta="15" minimum-distance="300" allow-overlap="true" ><![CDATA[[label1]]]></TextSymbolizer>
+    <TextSymbolizer face-name="Open Sans Bold" fill="#e9627d" halo-fill="#ffffff" halo-radius="1" opacity="1" size="12" placement="line" dy="-7" max-char-angle-delta="15" minimum-distance="300" allow-overlap="true" avoid-edges="true" ><![CDATA[[label1]]]></TextSymbolizer>
   </Rule>
 </Style>
 <Style name="dividers-dash" filter-mode="first">

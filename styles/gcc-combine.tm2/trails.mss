@@ -249,6 +249,7 @@
         text-max-char-angle-delta: 15;
         text-min-distance:300; 
    		text-allow-overlap: true;
+        text-avoid-edges: true;
     	}
         ::label2 {
     	text-name: [label2];
@@ -262,7 +263,8 @@
         text-dy: 5;
         text-max-char-angle-delta: 15;
         text-min-distance:300; 
-   		text-allow-overlap: true;    
+   		text-allow-overlap: true;   
+        text-avoid-edges: true;
     	}  
 }  
 #dividers [zoom > 15]{
@@ -289,6 +291,7 @@
         text-max-char-angle-delta: 15;
         text-min-distance:300; 
    		text-allow-overlap: true;
+        text-avoid-edges: true;
     	}
         ::label2 {
     	text-name: [label2];
@@ -303,5 +306,6 @@
         text-max-char-angle-delta: 15;
         text-min-distance:300; 
    		text-allow-overlap: true;    
+        text-avoid-edges: true;
     	}    
 }  

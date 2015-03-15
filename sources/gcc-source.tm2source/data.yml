@@ -2,37 +2,18 @@ _prefs:
   disabled: []
   inspector: false
   mapid: tesera.0fda17a9
-  rev: s-6fdf77d8
+  rev: s-057c562f
   saveCenter: true
 attribution: ''
 center: 
-  - -116.9579
-  - 51.2783
-  - 14
+  - -116.9603
+  - 51.2513
+  - 15
 description: A vector tile source for gcc-styles
 Layer: 
-  - id: trails
-    Datasource: 
-      file: "..\\features\\trails-fin.shp"
-      type: shape
-    description: ''
-    fields: 
-      built: String
-      descriptio: String
-      distance: String
-      km: String
-      maparea: String
-      name: String
-      number: String
-      objectid: String
-      pk: String
-      rating: String
-    properties: 
-      "buffer-size": 8
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
   - id: transmission
     Datasource: 
-      file: "..\\features\\transmission.shp"
+      file: "C:\\Users\\spenc_000\\Documents\\GitHub\\gcc-mapbox\\sources\\features\\transmission.shp"
       type: shape
     description: ''
     fields: 
@@ -44,7 +25,7 @@ Layer:
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
   - id: dividers
     Datasource: 
-      file: "..\\features\\dividers.shp"
+      file: "C:\\Users\\spenc_000\\Documents\\GitHub\\gcc-mapbox\\sources\\features\\dividers.shp"
       type: shape
     description: ''
     fields: 
@@ -54,11 +35,11 @@ Layer:
       label2: String
       pk: String
     properties: 
-      "buffer-size": 8
+      "buffer-size": 64
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
   - id: annotation
     Datasource: 
-      file: "..\\features\\annotation.shp"
+      file: "C:\\Users\\spenc_000\\Documents\\GitHub\\gcc-mapbox\\sources\\features\\annotation.shp"
       type: shape
     description: ''
     fields: 
@@ -71,7 +52,7 @@ Layer:
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
   - id: map-area
     Datasource: 
-      file: "..\\features\\map-area.shp"
+      file: "C:\\Users\\spenc_000\\Documents\\GitHub\\gcc-mapbox\\sources\\features\\map-area.shp"
       type: shape
     description: ''
     fields: 
@@ -79,11 +60,11 @@ Layer:
       maparea: String
       pk: String
     properties: 
-      "buffer-size": 8
+      "buffer-size": 0
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
   - id: map-area-centre
     Datasource: 
-      file: "..\\features\\map-area-centre.shp"
+      file: "C:\\Users\\spenc_000\\Documents\\GitHub\\gcc-mapbox\\sources\\features\\map-area-centre.shp"
       type: shape
     description: ''
     fields: 
@@ -93,6 +74,24 @@ Layer:
     properties: 
       "buffer-size": 64
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-maxzoom: 18
+  - id: trails-fin
+    Datasource: 
+      file: "C:\\Users\\spenc_000\\Documents\\GitHub\\gcc-mapbox\\sources\\features\\trails-fin.shp"
+      type: shape
+    description: trails
+    fields: 
+      built: String
+      descriptio: String
+      km: String
+      maparea: String
+      name: String
+      number: String
+      objectid: String
+      pk: String
+      rating: String
+    properties: 
+      "buffer-size": 42
+    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+maxzoom: 16
 minzoom: 0
 name: gcc-source

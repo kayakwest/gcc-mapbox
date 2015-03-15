@@ -52,7 +52,4 @@ styles:
   - label.mss
   - poi.mss
   - road.mss
-  - trails.mss
-  - annotation.mss
-  - extra.mss
 template: ''

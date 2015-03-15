@@ -1,6 +1,6 @@
  @font: 'Open Sans Bold';
 
-#trails-fin [built = 1][zoom > 13]{
+#trails [built = '1'] [zoom > 13]{
   [rating='Green'] {
       ::line {
         line-width: 5;
@@ -243,8 +243,3 @@
    		text-allow-overlap: true;    
     	}    
 }  
-//#gcc-trails [built = 0]{
-//        line-color: #e9627d;
-//        line-width: 3;
-//        line-dasharray: 1, 1;     
- // }

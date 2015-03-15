@@ -15,9 +15,254 @@
 </Parameters>
 
 
+<Style name="trails-dash" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Double Black')</Filter>
+    <LineSymbolizer stroke="#ffffff" stroke-width="2.5" stroke-dasharray="6, 20" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Black')</Filter>
+    <LineSymbolizer stroke="#000000" stroke-width="2.5" stroke-dasharray="8, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Blue')</Filter>
+    <LineSymbolizer stroke="#15758b" stroke-width="2.5" stroke-dasharray="8, 2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Green')</Filter>
+    <LineSymbolizer stroke="#348d08" stroke-width="2.5" stroke-dasharray="8, 2" />
+  </Rule>
+</Style>
+<Style name="trails-line" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>750</MaxScaleDenominator>
+    <MinScaleDenominator>500</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Double Black')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#000000" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#000000" halo-fill="#ffffff" halo-radius="1" placement="line" dy="6" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <MinScaleDenominator>750</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Double Black')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#000000" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#000000" halo-fill="#ffffff" halo-radius="1" placement="line" dy="6" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Double Black')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#000000" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#000000" halo-fill="#ffffff" halo-radius="1" placement="line" dy="6" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Double Black')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#000000" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#000000" halo-fill="#ffffff" halo-radius="1" placement="line" dy="6" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Double Black')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#000000" />
+    <TextSymbolizer size="12" face-name="Open Sans Bold" fill="#000000" halo-fill="#ffffff" halo-radius="1" placement="line" dy="6" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Double Black')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#000000" />
+    <TextSymbolizer size="10" face-name="Open Sans Bold" fill="#000000" halo-fill="#ffffff" halo-radius="1" placement="line" dy="6" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Double Black')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#000000" />
+    <TextSymbolizer size="8" face-name="Open Sans Bold" fill="#000000" halo-fill="#ffffff" halo-radius="1" placement="line" dy="6" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500</MaxScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Double Black')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#000000" />
+    <TextSymbolizer face-name="Open Sans Bold" fill="#000000" halo-fill="#ffffff" halo-radius="1" size="8" placement="line" dy="6" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750</MaxScaleDenominator>
+    <MinScaleDenominator>500</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Black')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#000000" halo-radius="1" halo-fill="#ffffff" placement="line" dy="-8" max-char-angle-delta="40" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <MinScaleDenominator>750</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Black')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#000000" halo-radius="1" halo-fill="#ffffff" placement="line" dy="-8" max-char-angle-delta="40" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Black')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#000000" halo-radius="1" halo-fill="#ffffff" placement="line" dy="-8" max-char-angle-delta="40" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Black')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#000000" halo-radius="1" halo-fill="#ffffff" placement="line" dy="-8" max-char-angle-delta="40" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Black')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="12" face-name="Open Sans Bold" fill="#000000" halo-radius="1" halo-fill="#ffffff" placement="line" dy="-8" max-char-angle-delta="40" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Black')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="10" face-name="Open Sans Bold" fill="#000000" halo-radius="1" halo-fill="#ffffff" placement="line" dy="-8" max-char-angle-delta="40" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Black')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="8" face-name="Open Sans Bold" fill="#000000" halo-radius="1" halo-fill="#ffffff" placement="line" dy="-8" max-char-angle-delta="40" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500</MaxScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Black')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer face-name="Open Sans Bold" fill="#000000" halo-radius="1" halo-fill="#ffffff" size="8" placement="line" dy="-8" max-char-angle-delta="40" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750</MaxScaleDenominator>
+    <MinScaleDenominator>500</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Blue')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#15758b" halo-fill="#ffffff" halo-radius="1" placement="line" dy="8" max-char-angle-delta="30" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <MinScaleDenominator>750</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Blue')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#15758b" halo-fill="#ffffff" halo-radius="1" placement="line" dy="8" max-char-angle-delta="30" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Blue')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#15758b" halo-fill="#ffffff" halo-radius="1" placement="line" dy="8" max-char-angle-delta="30" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Blue')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" fill="#15758b" halo-fill="#ffffff" halo-radius="1" placement="line" dy="8" max-char-angle-delta="30" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Blue')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="12" face-name="Open Sans Bold" fill="#15758b" halo-fill="#ffffff" halo-radius="1" placement="line" dy="8" max-char-angle-delta="30" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Blue')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="10" face-name="Open Sans Bold" fill="#15758b" halo-fill="#ffffff" halo-radius="1" placement="line" dy="8" max-char-angle-delta="30" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Blue')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="8" face-name="Open Sans Bold" fill="#15758b" halo-fill="#ffffff" halo-radius="1" placement="line" dy="8" max-char-angle-delta="30" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500</MaxScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Blue')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer face-name="Open Sans Bold" fill="#15758b" halo-fill="#ffffff" halo-radius="1" size="8" placement="line" dy="8" max-char-angle-delta="30" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750</MaxScaleDenominator>
+    <MinScaleDenominator>500</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Green')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" halo-radius="1" halo-fill="#ffffff" fill="#348d08" placement="line" dy="8" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <MinScaleDenominator>750</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Green')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" halo-radius="1" halo-fill="#ffffff" fill="#348d08" placement="line" dy="8" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Green')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" halo-radius="1" halo-fill="#ffffff" fill="#348d08" placement="line" dy="8" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Green')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="14" face-name="Open Sans Bold" halo-radius="1" halo-fill="#ffffff" fill="#348d08" placement="line" dy="8" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Green')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="12" face-name="Open Sans Bold" halo-radius="1" halo-fill="#ffffff" fill="#348d08" placement="line" dy="8" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Green')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="10" face-name="Open Sans Bold" halo-radius="1" halo-fill="#ffffff" fill="#348d08" placement="line" dy="8" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Green')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer size="8" face-name="Open Sans Bold" halo-radius="1" halo-fill="#ffffff" fill="#348d08" placement="line" dy="8" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>500</MaxScaleDenominator>
+    <Filter>([built] = '1') and ([rating] = 'Green')</Filter>
+    <LineSymbolizer stroke-width="5" stroke="#ffffff" />
+    <TextSymbolizer face-name="Open Sans Bold" halo-radius="1" halo-fill="#ffffff" fill="#348d08" size="8" placement="line" dy="8" max-char-angle-delta="15" minimum-distance="300" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
 <Layer name="trails"
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
-      </Layer>
+    <StyleName>trails-line</StyleName>
+    <StyleName>trails-dash</StyleName>  </Layer>
 
 <Style name="transmission-hatch" filter-mode="first">
   <Rule>

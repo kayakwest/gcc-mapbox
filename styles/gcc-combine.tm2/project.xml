@@ -210,8 +210,8 @@
   </Rule>
   <Rule>
     <Filter>([class] = 'park')</Filter>
-    <PolygonSymbolizer fill="#dcf8e3" />
-    <LineSymbolizer stroke="#d1ecd8" offset="-0.5" />
+    <PolygonSymbolizer fill="#c3f2cf" />
+    <LineSymbolizer stroke="#b9e6c5" offset="-0.5" />
   </Rule>
   <Rule>
     <Filter>([class] = 'industrial')</Filter>
@@ -248,12 +248,12 @@
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <Filter>([type] = 'golf_course')</Filter>
-    <PolygonSymbolizer fill="#b2f0c1" />
+    <PolygonSymbolizer fill="#99e9ad" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <Filter>([type] = 'rough')</Filter>
-    <PolygonSymbolizer fill="#b2f0c1" />
+    <PolygonSymbolizer fill="#99e9ad" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -292,7 +292,7 @@
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
     <Filter>([class] = 'rock') and ([type] = 'rough')</Filter>
-    <PolygonSymbolizer fill="#b2f0c1" />
+    <PolygonSymbolizer fill="#99e9ad" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>400000</MaxScaleDenominator>
@@ -304,7 +304,7 @@
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
     <Filter>([class] = 'rock') and ([type] = 'golf_course')</Filter>
-    <PolygonSymbolizer fill="#b2f0c1" />
+    <PolygonSymbolizer fill="#99e9ad" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>400000</MaxScaleDenominator>
@@ -316,13 +316,13 @@
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
     <Filter>([type] = 'rough')</Filter>
-    <PolygonSymbolizer fill="#b2f0c1" />
+    <PolygonSymbolizer fill="#99e9ad" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>25000</MinScaleDenominator>
     <Filter>([type] = 'golf_course')</Filter>
-    <PolygonSymbolizer fill="#b2f0c1" />
+    <PolygonSymbolizer fill="#99e9ad" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
@@ -366,7 +366,7 @@
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([class] = 'rock') and ([type] = 'rough')</Filter>
-    <PolygonSymbolizer fill="#b2f0c1" />
+    <PolygonSymbolizer fill="#99e9ad" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
@@ -378,7 +378,7 @@
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([class] = 'rock') and ([type] = 'golf_course')</Filter>
-    <PolygonSymbolizer fill="#b2f0c1" />
+    <PolygonSymbolizer fill="#99e9ad" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>750000</MaxScaleDenominator>
@@ -390,13 +390,13 @@
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'rough')</Filter>
-    <PolygonSymbolizer fill="#b2f0c1" />
+    <PolygonSymbolizer fill="#99e9ad" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
     <Filter>([type] = 'golf_course')</Filter>
-    <PolygonSymbolizer fill="#b2f0c1" />
+    <PolygonSymbolizer fill="#99e9ad" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>100000</MaxScaleDenominator>
@@ -812,25 +812,25 @@
   <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>
     <Filter>([class] = 'hedge')</Filter>
-    <LineSymbolizer stroke-width="1.6" stroke="#87e79f" />
+    <LineSymbolizer stroke-width="1.6" stroke="#6fe08c" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
     <MinScaleDenominator>1500</MinScaleDenominator>
     <Filter>([class] = 'hedge')</Filter>
-    <LineSymbolizer stroke-width="1.4" stroke="#87e79f" />
+    <LineSymbolizer stroke-width="1.4" stroke="#6fe08c" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>5000</MaxScaleDenominator>
     <MinScaleDenominator>2500</MinScaleDenominator>
     <Filter>([class] = 'hedge')</Filter>
-    <LineSymbolizer stroke-width="1.2" stroke="#87e79f" />
+    <LineSymbolizer stroke-width="1.2" stroke="#6fe08c" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
     <Filter>([class] = 'hedge')</Filter>
-    <LineSymbolizer stroke-width="0.6" stroke="#87e79f" />
+    <LineSymbolizer stroke-width="0.6" stroke="#6fe08c" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>1500</MaxScaleDenominator>

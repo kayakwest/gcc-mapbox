@@ -16,7 +16,7 @@
 @cemetery: #edf4ed;
 @pitch: fadeout(#fff,50%);
 //@park: #c3dfc3;
-@park: #dcf8e3;
+@park: #c3f2cf;
 @piste: mix(blue,@land,5);
 @school: #fbf6ff;
 @hospital: #e9627d*1.5;
